@@ -1,0 +1,120 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Arial', sans-serif;
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+.container {
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+border-radius: 20px;
+padding: 40px;
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+text-align: center;
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.counter-display {
+font-size: 4rem;
+font-weight: bold;
+color: #fff;
+margin-bottom: 30px;
+text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+min-height: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 0.3s ease;
+}
+
+.counter-display.animate {
+transform: scale(1.1);
+color: #ffd700;
+text-shadow: 0 0 30px #ffd700;
+}
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-increment {
+            background: linear-gradient(45deg, #00d4aa, #00b894);
+            color: white;
+        }
+
+        .btn-decrement {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+        }
+
+        .btn-reset {
+            background: linear-gradient(45deg, #fdcb6e, #e17055);
+            color: white;
+        }
+
+        .btn-random {
+            background: linear-gradient(45deg, #a8e6cf, #88d8a3);
+            color: #2d3436;
+        }
+
+        .stats {
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+        }
+
+        .stats span {
+            display: block;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 480px) {
+            .counter-display {
+                font-size: 3rem;
+            }
+            
+            .btn {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding: 30px 20px;
+margin: 20px;
+}
+}
